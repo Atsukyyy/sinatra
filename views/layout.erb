@@ -5,6 +5,15 @@
   <title><%= @title %></title>
 </head>
 <body>
+  <h1>BBS</h1>
+  <ul>
+    <% @comments.each do |comment| %>
+    <li data-id="<%= @comment.id %>">
+    <%= comment.body %>
+    </li>
+    <% end %>
+
+  </ul>
   <%= yield %>
 </body>
 </html>
